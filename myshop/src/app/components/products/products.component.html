@@ -14,16 +14,16 @@
         <tbody>
           <ng-container *ngFor="let product of this.mainService.products?.productsTable">
             <tr style="background-color: whitesmoke;">
-            <td><img src="{{product.thumbnail}}" alt=""></td>
+            <td><img src="{{product.thumbnail}}" alt="" class="thumbnail"></td>
             <td>
             <ul>
-            <li>Tytuł: {{product.title}}</li>
-            <li>Cena: {{product.price}}</li>
-            <li>Kategoria: {{product.category}}</li>
+            <li class="title">Tytuł: {{product.title}}</li>
+            <li class="price">Cena: {{product.price}}</li>
+            <li class="category">Kategoria: {{product.category}}</li>
             </ul>
             </td>
             <td>
-            <button>Do koszyka</button>
+            <button (click)="addToCart(product)">Do koszyka</button>
             </td>
             </tr>
             </ng-container>
